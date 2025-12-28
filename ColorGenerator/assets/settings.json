@@ -1,0 +1,6 @@
+{
+    "pack": "en",
+    "language": "python",
+    "random-limit": 100,
+    "auto-update": true
+}
