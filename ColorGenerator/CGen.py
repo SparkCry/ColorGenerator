@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from typing import Any
 
 VERSION = "1.2"
-UPDATE_URL = ""
+UPDATE_URL = "https://raw.githubusercontent.com/SparkCry/ColorGenerator/refs/heads/main/ColorGenerator/CGen.py"
 BASE_DIR = Path(__file__).resolve().parent
 
 COLOR_LIST: dict[str, set[str]] = {
@@ -293,7 +293,7 @@ def print_result_line(idx: int, profile_name: str, disp_name: str, code_inner: s
     print(f"{idx_str} {prof_str} {hex_str}{str_pad_left} {eq_str} {str_pad_right}{code_str}{code_pad_str}   {preview_block}")
 
 def get_github_link_msg(pack_code: str) -> str:
-    link = f"https://github.com/SparkCry/ColorGenerator/tree/main/assets/pack_{pack_code}.json"
+    link = f"https://github.com/SparkCry/ColorGenerator/blob/main/ColorGenerator/assets/pack_{pack_code}.json"
     return SYSTEM.get_text('missing_pack_msg', pack_code.upper(), pack_code, link)
 
 def process_token(token: str, factory: AnsiFactory, reset: str) -> tuple[str, str, str, str] | None:
@@ -578,3 +578,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
